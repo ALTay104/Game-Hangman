@@ -1,6 +1,6 @@
 from Hangman_graphic import *
 
-word = 'apple'
+word = 'mississippi'
 turns = len(word)
 wrong = 0
 count = 6 #6 chances in hangman
@@ -21,9 +21,9 @@ while count > 0:
         for j in range(len(word)):
             if user_input == word[j]:
                 answer[j] = user_input #to place the character in sequence
-        print answer #to let player know their current answer
+        print ' '.join(answer) #to let player know their current answer
         flag = 'WON'
-        if answer in list(word): #if all correct, then win
+        if answer == list(word): #if all correct, then win
             break
 
 if flag == 'WON':
